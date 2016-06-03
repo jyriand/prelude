@@ -51,7 +51,7 @@
      (setq nrepl-log-messages t)
 
      (add-hook 'cider-mode-hook 'eldoc-mode)
-
+     (add-hook 'clojure-mode-hook 'imenu-add-menubar-index)
      (defun prelude-cider-repl-mode-defaults ()
        (subword-mode +1)
        (run-hooks 'prelude-interactive-lisp-coding-hook))
