@@ -70,6 +70,8 @@ Windows external keyboard from time to time."
 (if (fboundp 'set-fontset-font)
     (set-fontset-font t 'unicode "Apple Color Emoji" nil 'prepend))
 
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier 'super)
 
 (provide 'prelude-osx)
 ;;; prelude-osx.el ends here
