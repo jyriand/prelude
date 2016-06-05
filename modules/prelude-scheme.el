@@ -31,7 +31,7 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
-(prelude-require-package 'geiser)
+(prelude-require-packages '(geiser racket-mode))
 
 (require 'prelude-lisp)
 (require 'geiser)
@@ -43,6 +43,8 @@
 (setq geiser-repl-history-filename
       (expand-file-name "geiser-history" prelude-savefile-dir))
 
+(setq geiser-active-implementations '(racket))
+(setq geiser-racket-binary "/Applications/Racket v6.5/bin/racket")
 (add-hook 'scheme-mode-hook (lambda () (run-hooks 'prelude-lisp-coding-hook)))
 
 (provide 'prelude-scheme)

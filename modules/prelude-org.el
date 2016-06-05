@@ -31,7 +31,7 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
-
+(add-to-list 'load-path "vendor/ob-racket.el")
 (add-to-list 'auto-mode-alist '("\\.org\\’" . org-mode))
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
@@ -51,6 +51,14 @@
 (setq prelude-org-mode-hook 'prelude-org-mode-defaults)
 
 (add-hook 'org-mode-hook (lambda () (run-hooks 'prelude-org-mode-hook)))
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((racket . t)))
+(setq org-confirm-babel-evaluate nil)
+
+(setq org-src-fontify-natively t)
+(setq org-babel-racket-command "/usr/local/bin/racket")
 
 (provide 'prelude-org)
 
