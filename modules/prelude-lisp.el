@@ -57,6 +57,7 @@
   (rainbow-delimiters-mode +1)
   (whitespace-mode -1))
 
+(add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
 (setq prelude-interactive-lisp-coding-hook 'prelude-interactive-lisp-coding-defaults)
 
 (provide 'prelude-lisp)

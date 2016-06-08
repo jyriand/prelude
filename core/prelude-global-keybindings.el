@@ -111,6 +111,11 @@
 (global-set-key (kbd "s-.") 'avy-goto-word-or-subword-1)
 (global-set-key (kbd "s-w") 'ace-window)
 
+;;dash-at-point
+(global-set-key (kbd "C-c C-d p") 'dash-at-point)
+(global-set-key (kbd "C-c C-d e") 'dash-at-point-with-docset)
+
+
 (provide 'prelude-global-keybindings)
 
 ;;; prelude-global-keybindings.el ends here
