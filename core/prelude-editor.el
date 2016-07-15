@@ -259,6 +259,8 @@ The body of the advice is in BODY."
 (require 'projectile)
 (setq projectile-cache-file (expand-file-name  "projectile.cache" prelude-savefile-dir))
 (projectile-global-mode t)
+(add-to-list 'projectile-globally-ignored-directories "target")
+(add-to-list 'projectile-globally-ignored-directories "out")
 
 ;; avy allows us to effectively navigate to visible things
 (require 'avy)

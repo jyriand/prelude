@@ -89,5 +89,7 @@
 (require 'which-key)
 (which-key-mode +1)
 
+(set-face-attribute 'default (selected-frame) :height 120)
+
 (provide 'prelude-ui)
 ;;; prelude-ui.el ends here
